@@ -49,7 +49,14 @@ export default class RileyList extends React.Component {
            aceWithdrawTitle: "Flare Withdrawal Pricing",
            aceWithdrawTitleSpanish: "COSTO DE RETIRO DE CUENTA FLARE",
            aceBox1: "With Qualifying Direct Deposit",
-           aceBox2: "Without Qualifying Direct Deposit"
+           aceBox2: "Without Qualifying Direct Deposit",
+           flarePricingTitle: ["Up to $400.00 Hasta $400","$400.01 - $1000.00","$1000.01 & Above $1000.01 y Mas"],
+           flarePriceOne: ["$0","2%","2.75%"],
+           flarePriceTwo: ["$3","2%","2.75%"],
+           addMoneyTitle: "Add Money",
+           addMoneyTitleSpanish: "AGREGAR DINERO",
+           addMoneyWithDDAmount: "$3.00",
+           addMoneyWithOutDDAmount: "$3.95"
 
        }
 
@@ -170,37 +177,84 @@ componentDidMount(){
 
 
               <h2 className="payroll-margin-d">{this.state.aceWithdrawTitle}</h2>
-              <h5 className="check-cash-percent-d">{this.state.aceWithdrawTitleSpanish}</h5>
+          
               <h5 className="check-cash-spanish-d">{this.state.aceBox1}</h5>
               <h5 className="check-cash-line-d">{this.state.aceBox2}</h5>
+              <h5 className="check-cash-percent-d">{this.state.aceWithdrawTitleSpanish}</h5>
               <div className="check-cash-line-e"></div>
 
 
-              </div>
+              {this.state.flarePricingTitle.map((p,idx)=>{
+
+                return (
+                <div className="f-price-div">
+                 <h4 className="ftitle1">{p}</h4>
+                 <h4 className="ftitle2">{this.state.flarePriceOne[idx]}</h4>
+                 <h4 className="price-two">{this.state.flarePriceTwo[idx]}</h4>
+                 </div>
+                )
+
+              })}
+
+
+              <h2 className="add-money">{this.state.addMoneyTitle}</h2>            
+              <h5 className="add-money-3">{this.state.addMoneyWithDDAmount}</h5>
+              <h5 className="add-money-3">{this.state.addMoneyWithOutDDAmount}</h5>
+              <h5 className="add-money-2">{this.state.addMoneyTitleSpanish}</h5>
+
+              <div className="add-money-line"></div>
+
+
+
+            {/* Update changes Here  */}
+
+
+              <h2 className="title-Headings title-Margin">{this.state.aceFlareAccountOne}</h2>
+              <h2 className="title-Headings title-Margin">{this.state.aceFlareAccountTwo}</h2>
+
+              <h2 className="payroll-margin-c">{this.state.aceFlareAppProcessingFee}</h2>
+              <h4 className="check-cash-percent-c">{this.state.aceFlareAmount}</h4>
+              <h5 className="check-cash-spanish-c">{this.state.aceFlareAppProcessingFeeSpanish}</h5>
+
+
+              <h2 className="payroll-margin-d">{this.state.aceWithdrawTitle}</h2>
+          
+              <h5 className="check-cash-spanish-d">{this.state.aceBox1}</h5>
+              <h5 className="check-cash-line-d">{this.state.aceBox2}</h5>
+              <h5 className="check-cash-percent-d">{this.state.aceWithdrawTitleSpanish}</h5>
+              <div className="check-cash-line-e"></div>
+
+
+              {this.state.flarePricingTitle.map((p,idx)=>{
+
+                return (
+                <div className="f-price-div">
+                 <h4 className="ftitle1">{p}</h4>
+                 <h4 className="ftitle2">{this.state.flarePriceOne[idx]}</h4>
+                 <h4 className="price-two">{this.state.flarePriceTwo[idx]}</h4>
+                 </div>
+                )
+
+              })}
+
+
+              <h2 className="add-money">{this.state.addMoneyTitle}</h2>            
+              <h5 className="add-money-3">{this.state.addMoneyWithDDAmount}</h5>
+              <h5 className="add-money-3">{this.state.addMoneyWithOutDDAmount}</h5>
+              <h5 className="add-money-2">{this.state.addMoneyTitleSpanish}</h5>
+
+              <div className="add-money-line"></div>
+
+
+            </div>
+
+
 
               {/* Row 2 C  */}
 
 
 
             {/* Wrapper */}
-    </div>  
 
 
-
-    
-
-
-
-
-        
-
-
-
-
-       )
-   }
-  
-
-
-
-}
+</div>)}}
