@@ -1,24 +1,21 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import RileyList from './components/riley-list';
+
+
+const data = {
+  status: "success",
+  message: "the click was successful",
+  info: "Info for the table",
+  theVal : ["one","nine","ten","eleven", "fifteen"]
+}
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <RileyList data={data}></RileyList>
     </div>
   );
 }
