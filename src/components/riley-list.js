@@ -56,7 +56,20 @@ export default class RileyList extends React.Component {
            addMoneyTitle: "Add Money",
            addMoneyTitleSpanish: "AGREGAR DINERO",
            addMoneyWithDDAmount: "$3.00",
-           addMoneyWithOutDDAmount: "$3.95"
+           addMoneyWithOutDDAmount: "$3.95",
+
+           prepaidDebitCardsTitle: "PREPAID DEBIT CARDS",
+           prepaidDebitCardsSpanishTitle: "TARJETAS DE DEBITO PREPAGADAS",
+           prepaidAceElite: "ACE Elite Card Purchase Minimum $10 Load",
+           prepaidAceEliteCost: "$3",
+           prepaidAceEliteSpanish: "COMPRA DE TARJETA ACE ELITE",
+           prepaidAceEliteSpanishSubText: " CARBA MININEA DE $10",
+
+           prepaidAtmTitle: "ATM Withdrawal Pricing",
+           prepaidAtmTitleSpanish: "COSTO DE RETIRO EN CAJERO AUTOMATICO",
+
+           prepaidPricingTitle: ["Up to $300.00 Hasta $300","$300.01 - $1000.00","$1000.01 & Above $1000.01 y Mas"],
+           prepaidPrice: ["$0","2%","2.75%"],
 
        }
 
@@ -209,35 +222,38 @@ componentDidMount(){
             {/* Update changes Here  */}
 
 
-              <h2 className="title-Headings title-Margin">{this.state.aceFlareAccountOne}</h2>
-              <h2 className="title-Headings title-Margin">{this.state.aceFlareAccountTwo}</h2>
+              <h2 className="title-Headings title-Margin prepaid">{this.state.prepaidDebitCardsTitle}</h2>
+              <h4 className="title-Headings title-Margin prepaid">{this.state.prepaidDebitCardsSpanishTitle}</h4>
 
-              <h2 className="payroll-margin-c">{this.state.aceFlareAppProcessingFee}</h2>
-              <h4 className="check-cash-percent-c">{this.state.aceFlareAmount}</h4>
-              <h5 className="check-cash-spanish-c">{this.state.aceFlareAppProcessingFeeSpanish}</h5>
+              <h3 className="prepaid-one">{this.state.prepaidAceElite}</h3>
+              <h3 className="prepaid-two">{this.state.prepaidAceEliteCost}</h3>
+              <h4 className="prepaid-three">{this.state.prepaidAceEliteSpanish}</h4>
+              <h6 className="prepaid-four">{this.state.prepaidAceEliteSpanishSubText}</h6>
+              <div className="prepaid-five"></div>
 
 
-              <h2 className="payroll-margin-d">{this.state.aceWithdrawTitle}</h2>
+              <h3 className="prepaid-six">{this.state.prepaidAtmTitle}</h3>            
+              <h5 className="prepaid-seven">{this.state.prepaidAtmTitleSpanish}</h5>
           
-              <h5 className="check-cash-spanish-d">{this.state.aceBox1}</h5>
-              <h5 className="check-cash-line-d">{this.state.aceBox2}</h5>
-              <h5 className="check-cash-percent-d">{this.state.aceWithdrawTitleSpanish}</h5>
-              <div className="check-cash-line-e"></div>
+              <div className="prepaid-five"></div>
 
 
-              {this.state.flarePricingTitle.map((p,idx)=>{
+
+
+              {this.state.prepaidPricingTitle.map((p,idx)=>{
 
                 return (
                 <div className="f-price-div">
-                 <h4 className="ftitle1">{p}</h4>
-                 <h4 className="ftitle2">{this.state.flarePriceOne[idx]}</h4>
-                 <h4 className="price-two">{this.state.flarePriceTwo[idx]}</h4>
+                 <h4 className="prepaid-ftitle1">{p}</h4>
+                 <h4 className="prepaid-ftitle2">{this.state.prepaidPrice[idx]}</h4>
+                
                  </div>
                 )
 
               })}
 
 
+              {/* Last section to finish here  */}
               <h2 className="add-money">{this.state.addMoneyTitle}</h2>            
               <h5 className="add-money-3">{this.state.addMoneyWithDDAmount}</h5>
               <h5 className="add-money-3">{this.state.addMoneyWithOutDDAmount}</h5>

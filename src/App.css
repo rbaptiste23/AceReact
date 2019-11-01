@@ -338,3 +338,58 @@ h3.money {
 }
 
 
+.prepaid{
+ margin: 0px;
+}
+
+.prepaid-one {
+  display: inline-block;
+  width: 95%;
+  margin-bottom:0px;
+}
+
+.prepaid-two{
+  display: inline-block;
+  margin-bottom: 0px;
+
+}
+
+.prepaid-three {  
+  display: inline-block;
+  margin: 0px;
+  width: 50%;
+
+
+}
+
+.prepaid-four {
+  display: inline-block;
+  margin: 0px;
+  width: 50%;
+}
+
+.prepaid-five{
+  border-bottom: 3px dotted black;
+}
+
+.prepaid-six{
+  margin: 10px 0px 0px 0px;
+}
+
+.prepaid-seven {
+   margin: 0px 0px 5px 0px;
+
+}
+
+.prepaid-ftitle1{
+  display: inline-block;
+  width: 70%;
+  margin-left: 10%;
+}
+
+.prepaid-ftitle2{
+  display: inline-block;
+  width: 19%; 
+  text-align: right;
+
+}
