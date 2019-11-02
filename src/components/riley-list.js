@@ -70,6 +70,10 @@ export default class RileyList extends React.Component {
 
            prepaidPricingTitle: ["Up to $300.00 Hasta $300","$300.01 - $1000.00","$1000.01 & Above $1000.01 y Mas"],
            prepaidPrice: ["$0","2%","2.75%"],
+           prepaidReloadTitle: "ALL Prepaid Card Reloads",
+           prepaidReloadTitleSpanish: "Todas las recargas de tarjetas prepagas",
+           prepaidReloadPrice: "up to $4.95",
+           prepaidReloadPriceSpanish: "HASTA $4.95"
 
        }
 
@@ -161,9 +165,11 @@ componentDidMount(){
                   return (
 
                     <div className="check-cash-options">
-                      <h4 className="payroll-margin">{m}</h4>
-                      <h4 className="check-cash-percent">{this.state.checkCashingChargePercent[idx]}</h4>
-                      <h4 className="check-cash-spanish">{this.state.checkCashingTypeSpanish[idx]}</h4>
+                      <h3 className="payroll-margin">{m}</h3>
+                      <h3 className="check-cash-percent">{this.state.checkCashingChargePercent[idx]}</h3>
+                      <h3 className="check-cash-spanish">{this.state.checkCashingTypeSpanish[idx]}</h3>
+
+                      
                   
                     </div>
 
@@ -253,22 +259,14 @@ componentDidMount(){
               })}
 
 
-              {/* Last section to finish here  */}
-              <h2 className="add-money">{this.state.addMoneyTitle}</h2>            
-              <h5 className="add-money-3">{this.state.addMoneyWithDDAmount}</h5>
-              <h5 className="add-money-3">{this.state.addMoneyWithOutDDAmount}</h5>
-              <h5 className="add-money-2">{this.state.addMoneyTitleSpanish}</h5>
-
-              <div className="add-money-line"></div>
-
-
+              <h2 className="add-money-last">{this.state.prepaidReloadTitle}</h2>            
+              <h4 className="add-money-3-last">{this.state.prepaidReloadPrice}</h4>
+              <h5 className="add-money-4-last">{this.state.prepaidReloadTitleSpanish}</h5>
+              <h5 className="add-money-2-last">{this.state.prepaidReloadPriceSpanish}</h5>
+          
             </div>
 
-
-
               {/* Row 2 C  */}
-
-
 
             {/* Wrapper */}
 

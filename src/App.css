@@ -143,20 +143,16 @@ h3.money {
 }
 
 
-
-
-
-
 .bp-types{
   margin-bottom: -30px;
 }
 
+
 .check-cash-options{
   border-bottom: 3px dotted black;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
  
 }
-
 
 
 .payroll-margin {
@@ -392,4 +388,42 @@ h3.money {
   width: 19%; 
   text-align: right;
 
+}
+
+
+.add-money-last{
+
+  width: 70%;
+  margin: 0%;
+  display: inline-block;
+
+}
+
+.add-money-2-last{
+  margin: 0%;
+  display: inline-block;
+  width: 20%;
+  text-align: right;
+}
+
+
+.add-money-3-last{
+  margin: 0%;
+  display: inline-block;
+  width: 30%;
+  font-size: 22px;
+  text-align: right;
+}
+
+.add-money-4-last{
+  margin: 0%;
+  display: inline-block;
+  width: 80%;
+  font-size: 22px;
+
+}
+ 
+ 
+.add-money-line {
+  border: 3px solid black;
 }
